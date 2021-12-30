@@ -12,3 +12,7 @@ var obj3 = {
     }
 };
 console.log(obj3);
+// オブジェクトリテラル表記
+var obj4 = {
+    b: 12
+};
