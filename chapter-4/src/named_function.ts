@@ -189,16 +189,63 @@ type Log = {
   (message: string, userId?: string): void
 }
 
+type Reservation = void
+// type Reserve = {
+//   (from: Date, to: Date, destination: string): Reservation
+// }
+
+// let reseve: Reserve = (from, to, destination) => {
+//   // ...
+// }
+
 type Reserve = {
-  (from: Date, to: Date, destination: string): Reservation
-}
-
-let reseve: Reserve = (from, to, destination) => {
-  // ...
-}
-
-type REserve = {
   (from: Date, to: Date, destination: string): Reservation
   (from: Date, destination: string): Reservation
 }
 
+let reseve: Reserve = (
+  from: Date,
+  toOrDestination: Date | string,
+  destination?: string
+) => {
+  if (toOrDestination instanceof Date && destination !== undefined) {
+    // 宿泊旅行を予約する
+  } else if (typeof toOrDestination === 'string') {
+    // 日帰り旅行を予約する
+  }
+}
+
+type CreateElement = {
+  (tag: 'a'): HTMLAnchorElement
+  (tag: 'canvas'): HTMLCanvasElement
+  (tag: 'table'): HTMLTableElement
+  (tag: 'string'): HTMLElement
+}
+
+let createElement: CreateElement = (tag: string): HTMLElement => {
+  //
+}
+
+function createElement(tag: 'a'): HTMLAnchorElement
+function createElement(tag: 'canvas'): HTMLCanvasElement
+function createElement(tag: 'table'): HTMLTableElement
+function createElement(tag: 'string'): HTMLElement {
+
+}
+
+function warnUser(warning: string) {
+  if (warnUser.wasCalled) {
+    return
+  }
+  warnUser.wasCalled = true
+  alert(warning)
+}
+warnUser.wasCalled = false
+
+//warnUser関数のシグネチャ
+type WarnUser = {
+  (warning: string): void //引数の型
+  wasCalled: boolean      // プロパティの型
+}
+
+const assignWarnUser: WarnUser = warnUser
