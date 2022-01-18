@@ -51,3 +51,25 @@ map(['a', 'b', 'c'], isSmallA);
 // 要するに上は以下の式になる elm: 配列の要素が入る想定
 map(['a', 'b', 'c'], function (elm) { return elm === 'a'; });
 map(['a', 'b', 'c'], function (_) { return _ === 'a'; });
+map(['a', 'b', 'c'], function (_) { return _ === 'a'; });
+// map<string, number>(
+//   ['a', 'b', 'c'],
+//   _ => _ === 'a',
+// )
+var promise = new Promise(function (resolve) {
+    return resolve(45);
+});
+promise.then(function (result) {
+    return result * 4;
+});
+var myEvent = {
+    target: document.querySelector('#myButton'),
+    type: 'click'
+};
+function triggerEvent(event) {
+    // something...
+}
+triggerEvent({
+    target: document.querySelector('#myButton'),
+    type: 'mouseover'
+});
