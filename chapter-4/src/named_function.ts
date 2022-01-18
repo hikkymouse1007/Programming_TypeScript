@@ -189,7 +189,7 @@ type Log = {
   (message: string, userId?: string): void
 }
 
-type Reservation = void
+// type Reservation = void
 // type Reserve = {
 //   (from: Date, to: Date, destination: string): Reservation
 // }
@@ -198,22 +198,22 @@ type Reservation = void
 //   // ...
 // }
 
-type Reserve = {
-  (from: Date, to: Date, destination: string): Reservation
-  (from: Date, destination: string): Reservation
-}
+// type Reserve = {
+//   (from: Date, to: Date, destination: string): Reservation
+//   (from: Date, destination: string): Reservation
+// }
 
-let reseve: Reserve = (
-  from: Date,
-  toOrDestination: Date | string,
-  destination?: string
-) => {
-  if (toOrDestination instanceof Date && destination !== undefined) {
-    // 宿泊旅行を予約する
-  } else if (typeof toOrDestination === 'string') {
-    // 日帰り旅行を予約する
-  }
-}
+// let reseve: Reserve = (
+//   from: Date,
+//   toOrDestination: Date | string,
+//   destination?: string
+// ) => {
+//   if (toOrDestination instanceof Date && destination !== undefined) {
+//     // 宿泊旅行を予約する
+//   } else if (typeof toOrDestination === 'string') {
+//     // 日帰り旅行を予約する
+//   }
+// }
 
 type CreateElement = {
   (tag: 'a'): HTMLAnchorElement
