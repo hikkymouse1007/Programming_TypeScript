@@ -44,5 +44,5 @@ console.log(myMap.getAll())
 let a = new MyMap<string, number>("k", 1)
 let b = new MyMap<string, boolean>("k", true)
 
-a.get("k")
-b.get("k")
+console.log(a.get("k"))
+console.log(b.get("k"))

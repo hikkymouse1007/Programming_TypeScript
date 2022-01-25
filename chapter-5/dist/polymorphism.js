@@ -28,5 +28,5 @@ console.log(myMap.get("key2"));
 console.log(myMap.getAll());
 var a = new MyMap("k", 1);
 var b = new MyMap("k", true);
-a.get("k");
-b.get("k");
+console.log(a.get("k"));
+console.log(b.get("k"));
